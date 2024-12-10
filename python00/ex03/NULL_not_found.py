@@ -5,7 +5,7 @@ def NULL_not_found(object: any) -> int:
 	if type(object).__name__ == "float" and math.isnan(object):
 		not_null = False
 	if not_null:
-		print("Type not found")
+		print("Type not Found")
 		return(1)
 	
 	my_type = type(object)
