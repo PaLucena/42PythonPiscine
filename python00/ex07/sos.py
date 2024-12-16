@@ -2,6 +2,8 @@ import sys
 
 
 def main():
+    """main"""
+
     morse_code = {
         'A': '.-',
         'B': '-...',
@@ -53,6 +55,7 @@ def main():
         print(morseStr)
     except AssertionError as e:
         print(f"AssertionError: {e}")
+
 
 if __name__ == "__main__":
     main()
