@@ -4,11 +4,16 @@ from load_image import ft_load
 
 
 def ft_zoom(pixels: np.ndarray, x0: int, x1: int, y0: int, y1: int):
+    """
+    Zooms into a region of the image based on
+    slicing indices and displays it with scaling axis.
+    Turns image grey.
+    """
     zoomed_image = pixels[y0:y1, x0:x1]
     grey_image = np.mean(zoomed_image, axis=2).astype(np.uint8)
     grey_image = np.expand_dims(grey_image, axis=-1)
-    print(grey_image.shape) 
-    print(grey_image) 
+    print("New shape after slicing:", grey_image.shape)
+    print(grey_image)
     plt.imshow(grey_image, cmap="gray")
     plt.xticks(np.arange(0, grey_image.shape[1], 50))
     plt.yticks(np.arange(0, grey_image.shape[0], 50))
